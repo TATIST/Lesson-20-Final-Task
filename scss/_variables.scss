@@ -1,15 +1,20 @@
-$baseColor: #fff;
-$mainColor: #ff4f00;
-$fadedColor: #8d8d8d;
+// FONT
+$font-logo: "Pacifico",
+cursive;
 
-$font-light: "Gilroy-Light",
-sans-serif;
-$font-semibold: "Gilroy-SemiBold",
-sans-serif;
-$font-bold: "Gilroy-Bold",
-sans-serif;
+// FONT SIZE
+$font-size-xs: 18px;
+$font-size-s: 20px;
+$font-size-m: 28px;
+$font-size-l: 48px;
+$font-size-xl: 62px;
 
-$font-lg: 63px;
-$font-medium: 19px;
-$font-small: 16px;
-$font-x-small: 14px;
+// COLORS
+$main-color: #0eb493;
+$base-color:#292f36;
+$color-accent:#2fa5e0;
+
+// COLORS
+$primary-color: #8e9296;
+$light-color: #7c7f83;
+$dark-color: #062033;

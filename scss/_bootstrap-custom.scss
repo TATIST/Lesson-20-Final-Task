@@ -1,0 +1,19 @@
+@import "variables";
+$container-max-widths: (xl: 1170px, xxl: 1172px);
+
+// FONT
+$font-family-sans-serif: "Open Sans",
+sans-serif;
+
+// FONT SIZE
+$font-size-base: 0.8125rem;
+
+// COLORS
+$primary:$primary-color;
+$light: $light-color;
+$dark: $dark-color;
+
+// NAVBAR
+$navbar-dark-color: $white;
+$nav-link-color: $white;
+$navbar-dark-hover-color: $white;
