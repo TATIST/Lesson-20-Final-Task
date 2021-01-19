@@ -19,6 +19,11 @@ a {
   }
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -37,7 +42,6 @@ header {
   z-index: 3;
 
   nav .container {
-
     a,
     &:hover {
       text-decoration: none;
@@ -52,6 +56,7 @@ header {
         font-weight: 400;
         margin-bottom: -1px;
         letter-spacing: 1px;
+        position: relative;
 
         span {
           font-family: $font-family-sans-serif;
@@ -59,8 +64,8 @@ header {
           cursor: default;
           opacity: 0.5;
           position: absolute;
-          top: 33px;
-          left: 230px;
+          top: 11px;
+          left: 141px;
           letter-spacing: 0.4px;
 
           &:before {
@@ -86,7 +91,6 @@ header {
       }
     }
   }
-
 }
 
 .carousel-indicators {
@@ -173,42 +177,56 @@ header {
   }
 }
 
-main {
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: -72px;
 
-  .socials {
+  ul {
     display: flex;
-    justify-content: center;
-    margin-top: -72px;
+    justify-content: space-between;
+    min-width: 115px;
+    z-index: 4;
+    padding-left: inherit;
+  }
 
-    ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      min-width: 115px;
-      z-index: 4;
-      padding-left: inherit;
+  li {
+    display: flex;
+    align-items: center;
+    margin: 0 6px;
+
+    a,
+    span {
+      display: block;
     }
 
-    li {
+    a:hover {
+      text-decoration: none;
+    }
+
+    .icon {
+      color: $white;
+      opacity: 0.3;
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  .title-block{@include title-block;}
+
+  .features-block {
+    background-color: #f4f7f9;
+    ul {
       display: flex;
-      align-items: center;
-      margin: 0 6px;
 
-      a,
-      span {
-        display: block;
-      }
-
-      a:hover {
-        text-decoration: none;
-      }
-
-      .icon {
-        color: $light-color;
-
-        &:hover {
-          color: $white;
-          cursor: pointer;
+      li {
+        .features-title {
+          @include features-title;
         }
       }
     }
