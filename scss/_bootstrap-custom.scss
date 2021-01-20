@@ -1,5 +1,7 @@
 @import "variables";
-$container-max-widths: (xl: 1170px, xxl: 1172px);
+$container-max-widths: (xl: 1200px);
+$grid-gutter-width: 1.875rem;
+$container-padding-x: $grid-gutter-width / 2;
 
 // FONT
 $font-family-sans-serif: "Open Sans",
