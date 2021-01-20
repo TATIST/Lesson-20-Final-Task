@@ -312,7 +312,7 @@ main {
         height: 100%;
         font-size: 30px;
         text-align: center;
-        background: $main-color;
+        background: rgba($main-color, 0.9);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -354,7 +354,7 @@ main {
       &:hover {
         .img-description {
           visibility: visible;
-          opacity: 0.9;
+          opacity: 1;
           transition: all 0.3s ease-in-out;
         }
 

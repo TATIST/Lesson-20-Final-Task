@@ -7640,7 +7640,7 @@ main .works .thumbnail-item {
     height: 100%;
     font-size: 30px;
     text-align: center;
-    background: #0eb493;
+    background: rgba(14, 180, 147, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7670,7 +7670,7 @@ main .works .thumbnail-item {
       text-decoration: none; }
   main .works .thumbnail-item:hover .img-description {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
     transition: all 0.3s ease-in-out; }
   main .works .thumbnail-item:hover .icon {
     color: #fff;
