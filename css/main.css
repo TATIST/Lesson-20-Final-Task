@@ -7575,6 +7575,8 @@ main .features {
   padding-bottom: 120px; }
   main .features .title {
     margin-bottom: 59px; }
+  main .features .item:hover {
+    cursor: default; }
   main .features .item:hover .icon {
     color: #f4f7f9;
     border: 15px solid #0eb493;
@@ -7690,6 +7692,8 @@ main .team {
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 107px; }
+  main .team figure:hover {
+    cursor: default; }
   main .team figure:hover .person-description {
     transition: all 0.3s ease-in-out;
     opacity: 1; }
@@ -7772,3 +7776,25 @@ main .facts {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase; }
+
+main .discuss .description {
+  text-align: center;
+  color: #7c7f83;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 47px; }
+
+main .discuss .address-wrapper .address-title {
+  font-size: 20px;
+  color: #062033;
+  display: block;
+  margin-bottom: 40px; }
+
+main .discuss .address-wrapper address {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px; }
+  main .discuss .address-wrapper address a,
+  main .discuss .address-wrapper address p {
+    color: #6a737b; }

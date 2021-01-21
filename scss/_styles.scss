@@ -38,7 +38,6 @@ header {
   z-index: 3;
 
   nav .container {
-
     a,
     &:hover {
       text-decoration: none;
@@ -201,18 +200,17 @@ header {
   }
 }
 
-
 main {
   .title {
     @include title;
   }
 
-  >section {
+  > section {
     padding-top: 93px;
   }
 
   .features {
-    background-color: $secondary;
+    background-color: $secondary-light;
     padding-bottom: 120px;
 
     .title {
@@ -220,8 +218,12 @@ main {
     }
 
     .item {
+      &:hover {
+        cursor: default;
+      }
+
       &:hover .icon {
-        color: $secondary;
+        color: $secondary-light;
         border: 15px solid $main-color;
         background-color: $main-color;
         transition: all 0.5s ease-in-out;
@@ -238,8 +240,6 @@ main {
         justify-content: center;
         align-items: center;
         transition: all 0.7s ease-in-out;
-
-
       }
 
       .features-info {
@@ -269,7 +269,7 @@ main {
     }
 
     .tabs {
-      li+li {
+      li + li {
         margin-left: 11px;
       }
 
@@ -281,7 +281,6 @@ main {
         padding: 4px 18px;
         border-radius: 6px;
         border: 1px solid transparent;
-
 
         &.active {
           background: $main-color;
@@ -344,7 +343,6 @@ main {
         &:hover {
           text-decoration: none;
         }
-
       }
 
       &:hover {
@@ -377,6 +375,9 @@ main {
     }
 
     figure {
+      &:hover {
+        cursor: default;
+      }
 
       &:hover .person-description {
         transition: all 0.3s ease-in-out;
@@ -494,7 +495,34 @@ main {
       font-weight: 400;
       text-transform: uppercase;
     }
+  }
 
-    //  viewBox="-1 5 42.91 31.03"
+  .discuss {
+    .description {
+      @include description;
+      margin-bottom: 47px;
+    }
+
+    .address-wrapper {
+      .address-title {
+        font-size: $font-size-s;
+        color: $dark;
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      address {
+        display: flex;
+        flex-direction: column;
+        font-size: $font-size-xxs;
+
+        a,
+        p {
+          color: $secondary-dark;
+        }
+      }
+    }
   }
 }
+
+//  viewBox="-1 5 42.91 31.03"
