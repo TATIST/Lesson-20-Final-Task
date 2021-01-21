@@ -7499,7 +7499,7 @@ header {
     font-weight: 300;
     margin-bottom: 135px; }
     .carousel-wrapper .carousel-item .carousel-caption .lg-title-item {
-      font-size: 62px;
+      font-size: 60px;
       line-height: 57px; }
       .carousel-wrapper .carousel-item .carousel-caption .lg-title-item strong {
         font-weight: 700; }
@@ -7552,6 +7552,7 @@ header {
 
 main .title {
   font-weight: 800;
+  letter-spacing: -0.6px;
   color: #0eb493;
   text-transform: uppercase;
   text-align: center;
@@ -7567,7 +7568,7 @@ main .title {
     height: 14px; }
 
 main > section {
-  padding-top: 70px; }
+  padding-top: 93px; }
 
 main .features {
   background-color: #f4f7f9;
@@ -7677,3 +7678,97 @@ main .works .thumbnail-item {
     min-width: 40px;
     height: 40px;
     transition: all 0.3s ease-in-out; }
+
+main .team {
+  margin-bottom: 197px; }
+  main .team .title {
+    margin-bottom: 30px; }
+  main .team .description {
+    text-align: center;
+    color: #7c7f83;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 107px; }
+  main .team figure:hover .person-description {
+    transition: all 0.3s ease-in-out;
+    opacity: 1; }
+  main .team figure:hover .person-name {
+    color: #0eb493; }
+  main .team figure .person-photo {
+    position: relative;
+    margin-bottom: 15px; }
+  main .team figure .person-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(14, 180, 147, 0.95);
+    color: #fff;
+    z-index: 10;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out; }
+    main .team figure .person-description strong {
+      margin-bottom: 7px; }
+    main .team figure .person-description .socials {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 0;
+      flex: 1; }
+    main .team figure .person-description li {
+      width: 42px;
+      height: 42px;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid transparent;
+      margin: 0 2px;
+      transition: all 0.3s ease-in-out; }
+      main .team figure .person-description li:hover {
+        border: 1px solid #fff;
+        background: transparent; }
+    main .team figure .person-description a {
+      color: #fff; }
+      main .team figure .person-description a:hover {
+        text-decoration: none; }
+  main .team figure .person-name {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #062033;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 5px; }
+  main .team figure .person-position {
+    color: #8e9296; }
+
+main .facts {
+  background: url(../images/bg-section-facts.jpg) no-repeat 0 50%;
+  color: #fff;
+  padding-bottom: 137px; }
+  main .facts .title {
+    margin-bottom: 24px; }
+  main .facts .icon {
+    width: 130px;
+    height: 130px;
+    border: 2px solid #b1b0b2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease-in-out, border-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-bottom: 38px; }
+  main .facts .facts-title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 69px; }
+  main .facts .facts-text {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase; }
