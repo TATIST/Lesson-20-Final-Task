@@ -7388,17 +7388,8 @@ textarea.form-control-lg {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-eye:before {
-  content: "\e903"; }
-
-.icon-consulting:before {
-  content: "\e900"; }
-
-.icon-development:before {
-  content: "\e901"; }
-
-.icon-branding:before {
-  content: "\e902"; }
+.icon-forrst:before {
+  content: "\e904"; }
 
 .icon-google-plus:before {
   content: "\ea8b"; }
@@ -7411,6 +7402,21 @@ textarea.form-control-lg {
 
 .icon-dribbble:before {
   content: "\eaa7"; }
+
+.icon-behance:before {
+  content: "\eaa8"; }
+
+.icon-eye:before {
+  content: "\e903"; }
+
+.icon-consulting:before {
+  content: "\e900"; }
+
+.icon-development:before {
+  content: "\e901"; }
+
+.icon-branding:before {
+  content: "\e902"; }
 
 *,
 *:before,
@@ -7567,7 +7573,7 @@ main .title {
     width: 229px;
     height: 14px; }
 
-main > section {
+main > div {
   padding-top: 93px; }
 
 main .features {
@@ -7701,7 +7707,14 @@ main .team {
     color: #0eb493; }
   main .team figure .person-photo {
     position: relative;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    max-width: 250px;
+    margin: 0 auto; }
+    main .team figure .person-photo img {
+      max-width: 100%;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover; }
   main .team figure .person-description {
     position: absolute;
     top: 0;
@@ -7777,24 +7790,92 @@ main .facts {
     font-weight: 400;
     text-transform: uppercase; }
 
+main .discuss .title {
+  margin-bottom: 30px; }
+
 main .discuss .description {
   text-align: center;
   color: #7c7f83;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
-  margin-bottom: 47px; }
+  margin-bottom: 74px; }
 
 main .discuss .address-wrapper .address-title {
-  font-size: 20px;
+  font-size: 22px;
   color: #062033;
   display: block;
-  margin-bottom: 40px; }
+  margin-bottom: 31px; }
 
 main .discuss .address-wrapper address {
   display: flex;
   flex-direction: column;
-  font-size: 14px; }
+  font-size: 14px;
+  max-width: 200px; }
   main .discuss .address-wrapper address a,
   main .discuss .address-wrapper address p {
-    color: #6a737b; }
+    line-height: 23px;
+    color: #6a737b;
+    margin-bottom: 0; }
+
+main .discuss .form-wrapper strong {
+  display: block;
+  font-size: 24px;
+  line-height: 29px;
+  color: #062033;
+  margin-bottom: 29px; }
+
+main .discuss .form-wrapper .form-control {
+  height: 53px;
+  border: none;
+  border-radius: initial;
+  border-bottom: 1px solid #e7e7e7; }
+  main .discuss .form-wrapper .form-control:focus {
+    border-color: #0eb493;
+    box-shadow: none; }
+    main .discuss .form-wrapper .form-control:focus ~ label {
+      color: #0eb493; }
+
+main .discuss .form-wrapper label {
+  color: #c4c6c8; }
+
+main .discuss .form-wrapper textarea {
+  resize: none; }
+  main .discuss .form-wrapper textarea:focus {
+    resize: vertical; }
+
+main .discuss .form-wrapper .submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  border: 1px solid transparent; }
+  main .discuss .form-wrapper .submit-wrapper:before {
+    content: "";
+    background: url(../svg/mail.svg) no-repeat;
+    width: 23px;
+    height: 16px;
+    margin-top: 14px;
+    margin-right: 5px; }
+  main .discuss .form-wrapper .submit-wrapper .form-button {
+    width: auto;
+    font-size: 16px;
+    background: none;
+    border: none;
+    padding-top: 9px; }
+
+main .discuss .discuss-socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+  margin-bottom: 99px; }
+  main .discuss .discuss-socials ul {
+    padding-left: 0; }
+    main .discuss .discuss-socials ul li {
+      margin-bottom: 16px; }
+      main .discuss .discuss-socials ul li .icon {
+        color: #e7e7e7; }
+
+main .map img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; }

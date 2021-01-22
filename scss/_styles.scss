@@ -38,6 +38,7 @@ header {
   z-index: 3;
 
   nav .container {
+
     a,
     &:hover {
       text-decoration: none;
@@ -205,7 +206,7 @@ main {
     @include title;
   }
 
-  > section {
+  >div {
     padding-top: 93px;
   }
 
@@ -269,7 +270,7 @@ main {
     }
 
     .tabs {
-      li + li {
+      li+li {
         margin-left: 11px;
       }
 
@@ -391,6 +392,16 @@ main {
       .person-photo {
         position: relative;
         margin-bottom: 15px;
+        max-width: 250px;
+        margin: 0 auto;
+
+        img {
+          max-width: 100%;
+          min-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
       }
 
       .person-description {
@@ -457,7 +468,7 @@ main {
       }
 
       .person-position {
-        color: $primary-color;
+        color: $primary-color-dark;
       }
     }
   }
@@ -498,31 +509,129 @@ main {
   }
 
   .discuss {
+    .title {
+      margin-bottom: 30px;
+    }
+
     .description {
       @include description;
-      margin-bottom: 47px;
+      margin-bottom: 74px;
     }
 
     .address-wrapper {
       .address-title {
-        font-size: $font-size-s;
+        font-size: 22px;
         color: $dark;
         display: block;
-        margin-bottom: 40px;
+        margin-bottom: 31px;
+
       }
 
       address {
         display: flex;
         flex-direction: column;
         font-size: $font-size-xxs;
+        max-width: 200px;
 
         a,
         p {
+          line-height: 23px;
           color: $secondary-dark;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .form-wrapper {
+
+      strong {
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
+        color: $dark-color;
+        margin-bottom: 29px;
+      }
+
+      .form-control {
+        height: 53px;
+        border: none;
+        border-radius: initial;
+        border-bottom: 1px solid $primary-color-light;
+
+        &:focus {
+          border-color: $main-color;
+          box-shadow: none;
+
+          ~label {
+            color: $main-color;
+          }
+        }
+      }
+
+      label {
+        color: $primary-color;
+      }
+
+      textarea {
+        resize: none;
+
+        &:focus {
+          resize: vertical;
+        }
+      }
+
+      .submit-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 8px;
+        border: 1px solid transparent;
+
+        &:before {
+          content: "";
+          background: url(../svg/mail.svg) no-repeat;
+          width: 23px;
+          height: 16px;
+          margin-top: 14px;
+          margin-right: 5px;
+        }
+
+        .form-button {
+          width: auto;
+          font-size: 16px;
+          background: none;
+          border: none;
+          padding-top: 9px;
+        }
+      }
+    }
+
+    .discuss-socials {
+      display: flex;
+      justify-content: center;
+      margin-top: 17px;
+      margin-bottom: 99px;
+
+      ul {
+        padding-left: 0;
+
+        li {
+          margin-bottom: 16px;
+
+          .icon {
+            color: $primary-color-light;
+          }
         }
       }
     }
   }
-}
 
-//  viewBox="-1 5 42.91 31.03"
+  .map {
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .footer-wrapper {}
+}
