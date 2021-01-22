@@ -7567,7 +7567,16 @@ header {
     .carousel-wrapper .socials li .icon {
       color: #fff;
       opacity: 0.3;
-      transition: all 0.3s ease-in-out; }
+      transition: all 0.3s ease-in-out;
+      font-size: 1.125rem; }
+      .carousel-wrapper .socials li .icon.icon-google-plus {
+        font-size: 1.4rem; }
+        @media (max-width: 767.98px) {
+          .carousel-wrapper .socials li .icon.icon-google-plus {
+            font-size: 2.5rem; } }
+      @media (max-width: 767.98px) {
+        .carousel-wrapper .socials li .icon {
+          font-size: 2rem; } }
       .carousel-wrapper .socials li .icon:hover {
         opacity: 1;
         cursor: pointer; }
@@ -7926,17 +7935,12 @@ main .discuss .discuss-socials {
   margin-bottom: 99px; }
   main .discuss .discuss-socials ul {
     padding-left: 0; }
-    @media (min-width: 576px) {
+    @media (max-width: 767.98px) {
       main .discuss .discuss-socials ul {
         display: flex; } }
-    @media (min-width: 768px) {
-      main .discuss .discuss-socials ul {
-        display: block;
-        align-items: none;
-        margin-bottom: 0; } }
     main .discuss .discuss-socials ul li {
       margin-bottom: 16px; }
-      @media (min-width: 576px) {
+      @media (max-width: 767.98px) {
         main .discuss .discuss-socials ul li {
           margin: 20px; } }
       main .discuss .discuss-socials ul li a:hover {
@@ -7951,9 +7955,9 @@ main .discuss .discuss-socials {
 main .map img {
   height: 100%;
   object-fit: cover; }
-  @media (max-width: 575.98px) {
+  @media (max-width: 767.98px) {
     main .map img {
-      height: 250px; } }
+      height: 200px; } }
 
 main .footer-wrapper {
   background: #0eb493;
@@ -8036,6 +8040,9 @@ main .footer-wrapper {
         top: 6px;
         left: -15px;
         background: #1a957e; }
+        @media (max-width: 767.98px) {
+          main .footer-wrapper .about-author > span:before {
+            height: 16px; } }
       main .footer-wrapper .about-author > span img {
         margin: 0 5px; }
     main .footer-wrapper .about-author a,
