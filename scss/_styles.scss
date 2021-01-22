@@ -20,6 +20,12 @@ ol {
   list-style: none;
 }
 
+.icon:focus,
+a:focus,
+li:focus{
+    outline: none;
+  }
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -27,6 +33,12 @@ ol {
   padding-right: 3px;
   margin-left: 26px;
   letter-spacing: 0.6px;
+
+  @include media-breakpoint-down(lg){
+    text-align: center;
+    margin-left: 0;
+    font-size: $font-size-s;
+  }
 }
 
 header {
@@ -69,12 +81,19 @@ header {
     .navbar-nav {
       a:hover {
         border-top: 1px solid $color-accent;
+
+        @include media-breakpoint-down(lg){
+          border-top: none;
+          border-bottom: 1px solid $color-accent;
+        }
+
       }
     }
   }
 }
 
 .carousel-wrapper {
+
   .carousel-indicators {
     top: 0;
     left: unset;
@@ -361,7 +380,15 @@ main {
   }
 
   .team {
-    margin-bottom: 197px;
+    margin-bottom: 198px;
+
+    
+    @include media-breakpoint-down(sm) {
+      figure {
+        margin-bottom: 50px;
+      }
+    }
+
 
     .title {
       margin-bottom: 30px;
@@ -388,8 +415,7 @@ main {
 
       .person-photo {
         position: relative;
-        margin-bottom: 15px;
-        max-width: 250px;
+        max-width: 270px;
         margin: 0 auto;
 
         img {
@@ -462,6 +488,7 @@ main {
         color: $dark-color;
         transition: all 0.3s ease-in-out;
         margin-bottom: 5px;
+        margin-top: 15px;
       }
 
       .person-position {
@@ -473,10 +500,15 @@ main {
   .facts {
     background: url(../images/bg-section-facts.jpg) no-repeat 0 50%;
     color: $white;
-    padding-bottom: 137px;
+    padding-bottom: 96px;
+    background-size: cover;
 
     .title {
       margin-bottom: 24px;
+    }
+
+    .item{
+      margin-bottom: 40px;
     }
 
     .icon {
@@ -487,9 +519,51 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: background 1s ease-in-out,
-        border-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      background: transparent;
+      transition: background 1.2s cubic-bezier(.07,1.19,.51,.89),
+        border 0.3s ease-in-out;
       margin-bottom: 38px;
+
+&:hover {
+          background: $main-color;
+          border: 2px solid $main-color;
+          transition: background 1.2s cubic-bezier(.07,1.19,.51,.89), border 1s ease-in-out;
+          
+          path {
+            fill: transparent;
+          stroke: $white;
+          }
+        }
+        
+        &.fact-1,
+        &.fact-2,
+        &.fact-3,
+        &.fact-4 {
+          path {
+            stroke-dasharray: 198;
+            stroke-dashoffset: 0;
+            stroke-width: 1;
+          }
+          
+          &:hover {
+            path {
+              animation: animate-icon 0.7s cubic-bezier(.07,1.19,.51,.89)
+                forwards;
+            }
+          }
+        }
+      
+      @keyframes animate-icon {
+        0% {
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dashoffset: 198;
+        }
+        100% {
+          stroke-dashoffset: 396;
+        }
+      }
     }
 
     .facts-title {
@@ -506,6 +580,10 @@ main {
   }
 
   .discuss {
+     div ~ div {
+       margin-bottom: 30px;
+      }
+
     .title {
       margin-bottom: 30px;
     }
@@ -516,6 +594,11 @@ main {
     }
 
     .address-wrapper {
+
+      @include media-breakpoint-down(sm){
+        text-align: center;
+      }
+
       .address-title {
         font-size: 22px;
         color: $dark;
@@ -529,6 +612,10 @@ main {
         flex-direction: column;
         font-size: $font-size-xxs;
         max-width: 200px;
+
+        @include media-breakpoint-down(sm){
+          min-width: 100%;
+        }
 
         a,
         p {
@@ -598,6 +685,10 @@ main {
           background: none;
           border: none;
           padding-top: 9px;
+
+          &:focus{
+            outline: none;
+          }
         }
       }
     }
@@ -611,8 +702,22 @@ main {
       ul {
         padding-left: 0;
 
+        @include media-breakpoint-up(sm){
+          display: flex;
+        }
+
+        @include media-breakpoint-up(md){
+          display: block;
+          align-items: none;
+          margin-bottom: 0;
+        }
+
         li {
           margin-bottom: 16px;
+
+          @include media-breakpoint-up(sm){
+            margin: 20px;
+          }
 
           a {
 
@@ -638,9 +743,13 @@ main {
 
   .map {
     img {
-      max-width: 100%;
+      // max-width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include media-breakpoint-down(sm){
+        height: 250px;
+      }
     }
   }
 
@@ -651,6 +760,12 @@ main {
     padding-top: 109px;
     padding-bottom: 93px;
 
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+       div{
+         margin: 20px 0 20px;
+       }
+    }
 
     a {
       color: $white;
@@ -722,9 +837,8 @@ main {
       column-count: 2;
       padding-left: 0;
       margin-top: -5px;
-
-
-
+      width: 286px;
+      
       li {
         margin-bottom: 13px;
       }
@@ -732,7 +846,7 @@ main {
 
     .about-author {
       line-height: 24px;
-      padding: 53px 12px 0;
+      padding: 54px 12px 0;
 
       >span {
         display: block;
@@ -755,7 +869,7 @@ main {
       }
 
       a,
-      footer {
+      p {
         color: $dark-color;
       }
 
