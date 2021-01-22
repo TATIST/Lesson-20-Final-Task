@@ -7483,11 +7483,17 @@ header {
       letter-spacing: 0.4px;
       border-left: 1px solid #2fa5e0;
       white-space: nowrap; }
+  @media (max-width: 991.98px) {
+    header nav .container .navbar-nav {
+      background-color: rgba(16, 24, 54, 0.9); } }
+  header nav .container .navbar-nav a {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent; }
   header nav .container .navbar-nav a:hover {
     border-top: 1px solid #2fa5e0; }
     @media (max-width: 991.98px) {
       header nav .container .navbar-nav a:hover {
-        border-top: none;
+        border-top: 1px solid transparent;
         border-bottom: 1px solid #2fa5e0; } }
 
 .carousel-wrapper .carousel-indicators {
