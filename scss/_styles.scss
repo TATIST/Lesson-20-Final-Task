@@ -50,11 +50,7 @@ header {
       margin-top: 13px;
 
       .navbar-brand {
-        font-family: $font-logo;
-        font-size: 28px;
-        font-weight: 400;
-        margin-bottom: -1px;
-        letter-spacing: 1px;
+        @include logo
       }
 
       span {
@@ -191,6 +187,7 @@ header {
       .icon {
         color: $white;
         opacity: 0.3;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           opacity: 1;
@@ -617,9 +614,23 @@ main {
         li {
           margin-bottom: 16px;
 
-          .icon {
-            color: $primary-color-light;
+          a {
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            .icon {
+              color: $primary-color-light;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: $main-color;
+                text-decoration: none;
+              }
+            }
           }
+
         }
       }
     }
@@ -633,5 +644,121 @@ main {
     }
   }
 
-  // .footer-wrapper {}
+  .footer-wrapper {
+    background: $main-color;
+    color: $white;
+    border-top: 5px solid $dark-color;
+    padding-top: 109px;
+    padding-bottom: 93px;
+
+
+    a {
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .logo {
+      @include logo;
+      display: block;
+      margin-top: -17px;
+      margin-bottom: 28px;
+
+      a,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .title-footer {
+      display: block;
+      margin-bottom: 42px;
+      font-size: $font-size-xxs;
+    }
+
+    .input-wrapper {
+      position: relative;
+      margin-bottom: 17px;
+
+      .input-subscription {
+        height: 46px;
+        width: 100%;
+        color: $white;
+        background: $main-color;
+        padding-left: 8px;
+        padding-right: 50px;
+        border: 2px solid $white;
+        border-radius: 3px;
+        font-size: $font-size-xs;
+
+        &:focus {
+          outline: none;
+          background: rgba($white, 0.07);
+        }
+      }
+
+      .send-button {
+        background: url(../svg/arrow.svg)no-repeat;
+        width: 18px;
+        height: 13px;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .footer-list {
+      column-count: 2;
+      padding-left: 0;
+      margin-top: -5px;
+
+
+
+      li {
+        margin-bottom: 13px;
+      }
+    }
+
+    .about-author {
+      line-height: 24px;
+      padding: 53px 12px 0;
+
+      >span {
+        display: block;
+        margin-bottom: 48px;
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 1px;
+          height: 39px;
+          position: absolute;
+          top: 6px;
+          left: -15px;
+          background: #1a957e;
+        }
+
+        img {
+          margin: 0 5px;
+        }
+      }
+
+      a,
+      footer {
+        color: $dark-color;
+      }
+
+    }
+  }
 }

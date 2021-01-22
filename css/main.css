@@ -7457,6 +7457,7 @@ header {
     align-items: center;
     margin-top: 13px; }
     header nav .container .brand-wrapper .navbar-brand {
+      color: #fff;
       font-family: "Pacifico", cursive;
       font-size: 28px;
       font-weight: 400;
@@ -7551,7 +7552,8 @@ header {
       text-decoration: none; }
     .carousel-wrapper .socials li .icon {
       color: #fff;
-      opacity: 0.3; }
+      opacity: 0.3;
+      transition: all 0.3s ease-in-out; }
       .carousel-wrapper .socials li .icon:hover {
         opacity: 1;
         cursor: pointer; }
@@ -7872,10 +7874,97 @@ main .discuss .discuss-socials {
     padding-left: 0; }
     main .discuss .discuss-socials ul li {
       margin-bottom: 16px; }
-      main .discuss .discuss-socials ul li .icon {
-        color: #e7e7e7; }
+      main .discuss .discuss-socials ul li a:hover {
+        text-decoration: none; }
+      main .discuss .discuss-socials ul li a .icon {
+        color: #e7e7e7;
+        transition: all 0.3s ease-in-out; }
+        main .discuss .discuss-socials ul li a .icon:hover {
+          color: #0eb493;
+          text-decoration: none; }
 
 main .map img {
   max-width: 100%;
   height: 100%;
   object-fit: cover; }
+
+main .footer-wrapper {
+  background: #0eb493;
+  color: #fff;
+  border-top: 5px solid #062033;
+  padding-top: 109px;
+  padding-bottom: 93px; }
+  main .footer-wrapper a {
+    color: #fff; }
+    main .footer-wrapper a:hover {
+      text-decoration: underline; }
+  main .footer-wrapper .logo {
+    color: #fff;
+    font-family: "Pacifico", cursive;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: -1px;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: -17px;
+    margin-bottom: 28px; }
+    main .footer-wrapper .logo a, main .footer-wrapper .logo:hover {
+      text-decoration: none; }
+  main .footer-wrapper .title-footer {
+    display: block;
+    margin-bottom: 42px;
+    font-size: 14px; }
+  main .footer-wrapper .input-wrapper {
+    position: relative;
+    margin-bottom: 17px; }
+    main .footer-wrapper .input-wrapper .input-subscription {
+      height: 46px;
+      width: 100%;
+      color: #fff;
+      background: #0eb493;
+      padding-left: 8px;
+      padding-right: 50px;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      font-size: 18px; }
+      main .footer-wrapper .input-wrapper .input-subscription:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.07); }
+    main .footer-wrapper .input-wrapper .send-button {
+      background: url(../svg/arrow.svg) no-repeat;
+      width: 18px;
+      height: 13px;
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      border: none; }
+      main .footer-wrapper .input-wrapper .send-button:focus {
+        outline: none; }
+  main .footer-wrapper p {
+    line-height: 24px; }
+  main .footer-wrapper .footer-list {
+    column-count: 2;
+    padding-left: 0;
+    margin-top: -5px; }
+    main .footer-wrapper .footer-list li {
+      margin-bottom: 13px; }
+  main .footer-wrapper .about-author {
+    line-height: 24px;
+    padding: 53px 12px 0; }
+    main .footer-wrapper .about-author > span {
+      display: block;
+      margin-bottom: 48px;
+      position: relative; }
+      main .footer-wrapper .about-author > span:before {
+        content: "";
+        width: 1px;
+        height: 39px;
+        position: absolute;
+        top: 6px;
+        left: -15px;
+        background: #1a957e; }
+      main .footer-wrapper .about-author > span img {
+        margin: 0 5px; }
+    main .footer-wrapper .about-author a,
+    main .footer-wrapper .about-author footer {
+      color: #062033; }

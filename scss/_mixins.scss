@@ -1,3 +1,12 @@
+@mixin logo {
+    color: $white;
+    font-family: $font-logo;
+    font-size: $font-size-m;
+    font-weight: 400;
+    margin-bottom: -1px;
+    letter-spacing: 1px;
+}
+
 @mixin title {
     font-weight: 800;
     letter-spacing: -0.6px;
