@@ -145,18 +145,30 @@ header {
         font-size: $font-size-xl;
         line-height: 57px;
 
+        @include media-breakpoint-down(sm) {
+          font-size: $font-size-l;
+        }
+
         strong {
           font-weight: 700;
         }
       }
 
       .md-title-item {
-        font-size: $font-size-l;
+        font-size: $font-size-s;
         margin-bottom: 10px;
+
+        @include media-breakpoint-down(sm) {
+          font-size: $font-size-m;
+        }
       }
 
       .sm-title-item {
         font-size: $font-size-xs;
+
+        @include media-breakpoint-down(sm) {
+          font-size: $font-size-xxs;
+        }
       }
 
       .accent-title {
@@ -174,6 +186,10 @@ header {
           width: 28px;
           height: 1px;
           background-color: $main-color;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
         }
 
         &:before {
@@ -618,8 +634,12 @@ main {
 
     .address-wrapper {
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .address-title {
@@ -722,6 +742,10 @@ main {
       margin-top: 17px;
       margin-bottom: 99px;
 
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
+
       ul {
         padding-left: 0;
 
@@ -764,8 +788,9 @@ main {
       height: 100%;
       object-fit: cover;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         height: 200px;
+        padding: 0;
       }
     }
   }

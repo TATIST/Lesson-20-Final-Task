@@ -7528,13 +7528,22 @@ header {
     .carousel-wrapper .carousel-item .carousel-caption .lg-title-item {
       font-size: 60px;
       line-height: 57px; }
+      @media (max-width: 575.98px) {
+        .carousel-wrapper .carousel-item .carousel-caption .lg-title-item {
+          font-size: 48px; } }
       .carousel-wrapper .carousel-item .carousel-caption .lg-title-item strong {
         font-weight: 700; }
     .carousel-wrapper .carousel-item .carousel-caption .md-title-item {
-      font-size: 48px;
+      font-size: 20px;
       margin-bottom: 10px; }
+      @media (max-width: 575.98px) {
+        .carousel-wrapper .carousel-item .carousel-caption .md-title-item {
+          font-size: 28px; } }
     .carousel-wrapper .carousel-item .carousel-caption .sm-title-item {
       font-size: 18px; }
+      @media (max-width: 575.98px) {
+        .carousel-wrapper .carousel-item .carousel-caption .sm-title-item {
+          font-size: 14px; } }
     .carousel-wrapper .carousel-item .carousel-caption .accent-title {
       color: #0eb493; }
     .carousel-wrapper .carousel-item .carousel-caption .sm-title-item {
@@ -7546,6 +7555,9 @@ header {
         width: 28px;
         height: 1px;
         background-color: #0eb493; }
+        @media (max-width: 575.98px) {
+          .carousel-wrapper .carousel-item .carousel-caption .sm-title-item:before, .carousel-wrapper .carousel-item .carousel-caption .sm-title-item:after {
+            display: none; } }
       .carousel-wrapper .carousel-item .carousel-caption .sm-title-item:before {
         left: -61px; }
       .carousel-wrapper .carousel-item .carousel-caption .sm-title-item:after {
@@ -7863,9 +7875,13 @@ main .discuss .description {
   line-height: 24px;
   margin-bottom: 74px; }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   main .discuss .address-wrapper {
-    text-align: center; } }
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 main .discuss .address-wrapper .address-title {
   font-size: 22px;
@@ -7939,6 +7955,9 @@ main .discuss .discuss-socials {
   justify-content: center;
   margin-top: 17px;
   margin-bottom: 99px; }
+  @media (max-width: 991.98px) {
+    main .discuss .discuss-socials {
+      margin-bottom: 0; } }
   main .discuss .discuss-socials ul {
     padding-left: 0; }
     @media (max-width: 767.98px) {
@@ -7961,9 +7980,10 @@ main .discuss .discuss-socials {
 main .map img {
   height: 100%;
   object-fit: cover; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     main .map img {
-      height: 200px; } }
+      height: 200px;
+      padding: 0; } }
 
 main .footer-wrapper {
   background: #0eb493;
