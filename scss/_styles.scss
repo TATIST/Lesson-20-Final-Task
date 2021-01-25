@@ -82,6 +82,8 @@ header {
     .navbar-nav {
       @include media-breakpoint-down(lg) {
         background-color: rgba(16, 24, 54, 0.9);
+        margin-left: -15px;
+        margin-right: -15px;
       }
 
       a {
@@ -210,7 +212,7 @@ header {
     bottom: 33px;
     left: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 2;
     padding-left: 0;
     margin: 0;
 
@@ -540,6 +542,21 @@ main {
     color: $white;
     padding-bottom: 96px;
     background-size: cover;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($dark-color, 0.8);
+    }
+
+    .container {
+      position: relative;
+    }
 
     .title {
       margin-bottom: 24px;
@@ -561,6 +578,10 @@ main {
       transition: background 1.2s cubic-bezier(.07, 1.19, .51, .89),
         border 0.3s ease-in-out;
       margin-bottom: 38px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
 
       &:hover {
         background: $main-color;
@@ -603,18 +624,31 @@ main {
           stroke-dashoffset: 396;
         }
       }
+
+      @include media-breakpoint-down(md) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .facts-title {
       font-size: $font-size-xl;
       font-weight: 600;
       line-height: 69px;
+
+      @include media-breakpoint-down(md) {
+        font-size: $font-size-l;
+      }
     }
 
     .facts-text {
       font-size: $font-size-xs;
       font-weight: 400;
       text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        font-size: $font-size-xxs;
+      }
     }
   }
 

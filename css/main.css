@@ -7485,7 +7485,9 @@ header {
       white-space: nowrap; }
   @media (max-width: 991.98px) {
     header nav .container .navbar-nav {
-      background-color: rgba(16, 24, 54, 0.9); } }
+      background-color: rgba(16, 24, 54, 0.9);
+      margin-left: -15px;
+      margin-right: -15px; } }
   header nav .container .navbar-nav a {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent; }
@@ -7570,7 +7572,7 @@ header {
   bottom: 33px;
   left: 0;
   width: 100%;
-  z-index: 4;
+  z-index: 2;
   padding-left: 0;
   margin: 0; }
   .carousel-wrapper .socials li {
@@ -7815,7 +7817,18 @@ main .facts {
   background: url(../images/bg-section-facts.jpg) no-repeat 0 50%;
   color: #fff;
   padding-bottom: 96px;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  main .facts:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 32, 51, 0.8); }
+  main .facts .container {
+    position: relative; }
   main .facts .title {
     margin-bottom: 24px; }
   main .facts .item {
@@ -7831,6 +7844,9 @@ main .facts {
     background: transparent;
     transition: background 1.2s cubic-bezier(0.07, 1.19, 0.51, 0.89), border 0.3s ease-in-out;
     margin-bottom: 38px; }
+    @media (max-width: 767.98px) {
+      main .facts .icon {
+        margin-bottom: 10px; } }
     main .facts .icon:hover {
       background: #0eb493;
       border: 2px solid #0eb493;
@@ -7852,14 +7868,24 @@ main .facts {
     stroke-dashoffset: 198; }
   100% {
     stroke-dashoffset: 396; } }
+    @media (max-width: 767.98px) {
+      main .facts .icon {
+        width: 100px;
+        height: 100px; } }
   main .facts .facts-title {
     font-size: 60px;
     font-weight: 600;
     line-height: 69px; }
+    @media (max-width: 767.98px) {
+      main .facts .facts-title {
+        font-size: 48px; } }
   main .facts .facts-text {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase; }
+    @media (max-width: 767.98px) {
+      main .facts .facts-text {
+        font-size: 14px; } }
 
 main .discuss div ~ div {
   margin-bottom: 30px; }
